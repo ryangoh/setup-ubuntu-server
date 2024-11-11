@@ -64,7 +64,7 @@ function setupUfw() {
     sudo apt-get install ufw
     sudo ufw allow OpenSSH
     sudo ufw allow http
-sudo ufw allow https
+    sudo ufw allow https
     yes y | sudo ufw enable
 }
 
@@ -170,6 +170,6 @@ function revertSudoers() {
 
 # Reverts the original /etc/sudoers file before this script is ran
 function setupFail2Ban() {
-    sudo apt-get install fail2ban
+    yes y | sudo apt-get install fail2ban
     sudo service fail2ban start
 }
